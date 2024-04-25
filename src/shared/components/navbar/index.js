@@ -199,7 +199,7 @@ export default function Navbar() {
                 </div>
               ) : (
                 <>
-                  {/* <GoogleWithLogin text={"Login"} /> */}
+                  <GoogleWithLogin text={"Login"} />
                 </>
               )}
             </div>

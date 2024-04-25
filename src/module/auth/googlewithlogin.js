@@ -1,16 +1,16 @@
 "use client";
 import { logIn, setSessionData } from "@/store/ApiSlice/authSlice";
 import React, { useEffect, useState } from "react";
-// import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import styles from "../../shared/components/navbar/navbar.module.scss";
-// import firebase from "@/shared/components/navbar/firebase";
+import firebase from "@/shared/components/navbar/firebase";
 import axios from "axios";
 const GoogleLogo = "/assets/icons/google-icon.svg";
 
 const GoogleWithLogin = ({ text }) => {
-  // const [signInWithGoogle, user] = useSignInWithGoogle(firebase);
+  const [signInWithGoogle, user] = useSignInWithGoogle(firebase);
   const dispatch = useDispatch();
   useEffect(() => {
     if (user?.user?.email) {
@@ -63,7 +63,7 @@ const GoogleWithLogin = ({ text }) => {
       <div
         className={styles.rightContent}
         onClick={() => {
-          // signInWithGoogle();
+          signInWithGoogle();
         }}
       >
         <button aria-label="google logo">
