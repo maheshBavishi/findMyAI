@@ -1,0 +1,69 @@
+@import '../../../styles/mixins/index.scss';
+
+.categoriestextsectionAlignment{
+    .textStyle {
+        padding:  0 0 50px 0;
+        p {
+            @include font16;
+            font-weight: 500;
+            color: $theme-gray-100;
+            margin: 0 0 16px 0;
+            line-height: 26px;
+        }
+
+        span {
+            display: block;
+            @include font16;
+            font-weight: 500;
+            color: $theme-gray-100;
+            max-width: 1165px;
+            line-height: 27px; 
+        }
+    }
+    .textGridCard {
+        display: grid;
+        grid-template-columns: 1fr 1px 1fr;
+        gap: 70px;
+
+        @include breakpoint("sm-max") {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        .centerAlignment {
+            display: flex;
+            justify-content: center;
+            padding: 0 0 8px 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0 0 0 20px;
+
+            li {
+                @include font16;
+                color: $theme-gray-100;
+                padding: 0 0 10px 0;
+                line-height: 27px; 
+            }
+        }
+
+        h6{
+            @include font22;
+            opacity: 0.94;
+            color: $theme-white;
+            margin: 0 0 28px 0;
+            text-align: center;
+        }
+
+        .line{
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.18);
+            @include breakpoint("sm-max") {
+                width: 100%;
+                height: 1px;
+            }
+        }
+    }
+}

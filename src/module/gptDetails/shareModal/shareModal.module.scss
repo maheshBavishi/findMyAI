@@ -1,0 +1,127 @@
+@import"../../../styles/mixins/index.scss";
+
+.shareModalWrapper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.openModal {
+    transform: scale(1);
+    transition: 0.4s ease-in-out;
+    
+    
+  }
+
+  &.closeModal {
+    transform: scale(0);
+    transition: 0.4s ease-in-out;
+  }
+
+  .shareModalWrapperBoxAlignment {
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    background: rgba(3, 2, 25, 1);
+    ;
+    box-shadow: 0px 0px 30px 5px rgba(255, 255, 255, 0.12);
+    width: 550px;
+    padding: 25px;
+    border-radius: 25px;
+
+    @include breakpoint("sm-max") {
+      width: 100%;
+      padding: 16px;
+      margin: 16px;
+    }
+
+    .headingALignment {
+      h4 {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 22px;
+        @include breakpoint("sm-max") {
+          font-size: 18px;
+        }
+      }
+
+      p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+        padding: 15px 0 0 0;
+        @include breakpoint("sm-max") {
+          font-size: 14px;
+          padding: 12px 0 0 0;
+        }
+      }
+    }
+
+    .shareModalBodyAlignment {
+      padding: 40px 25px 0 25px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+
+      @include breakpoint("sm-max") {
+        padding: 40px 0 0 0;
+        gap: 16px;
+        justify-content: space-between;
+      }
+      .optionAlignment {
+        cursor: pointer;
+
+        .optionImg {
+          width: 54px;
+          height: 54px;
+          cursor: pointer;
+          margin: 0 auto;
+          @include breakpoint("sm-max") {
+            width: 40px;
+            height: 40px;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            display: block;
+          }
+        }
+
+        p {
+          color: rgba(255, 255, 255, 0.94);
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 15px;
+          padding: 8px 0 0 0;
+          @include breakpoint("sm-max") {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.closeAlignment {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .iconAlignmen {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}

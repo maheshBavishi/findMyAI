@@ -1,0 +1,42 @@
+@import "../../../styles/mixins/index.scss";
+
+.blogdetailsbanner {
+  .image {
+    width: 100%;
+    height: 617px;
+    object-fit: cover;
+    object-position: center;
+
+    @include breakpoint("md-max") {
+      height: 450px;
+    }
+
+    @include breakpoint("sm-max") {
+      height: 210px;
+    }
+
+    .cardImageChild {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
+
+.blogSkeleton {
+  width: 100%;
+  height: 617px;
+  @include breakpoint("md-max") {
+    height: 450px;
+  }
+
+  @include breakpoint("sm-max") {
+    height: 210px;
+  }
+}

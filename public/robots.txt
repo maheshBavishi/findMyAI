@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://main.dn4tlmkqq1vdv.amplifyapp.com/
+
+# Sitemaps
+Sitemap: https://main.dn4tlmkqq1vdv.amplifyapp.com/sitemap.xml

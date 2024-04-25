@@ -1,0 +1,25 @@
+@import '../../../styles/mixins/index.scss';
+
+.viewAllAlignment {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    
+    &:hover {
+        img {
+            transform: translateX(10px);
+        }
+    }
+
+    img {
+        transition: .3s ease-in-out;
+    }
+
+    span {
+        display: block;
+        @include font16;
+        color: $theme-white;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,21 @@
+@import '../../../styles/mixins/index.scss';
+
+.filterbutton {
+    @include breakpoint("sm-max") {
+        order: 2;
+    }
+    button {
+        border: 1.8px solid $theme-primary-background-color;
+        padding: 10px 25px;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        border-radius: 6px;
+        color: $theme-white;
+        @include font16;
+        font-weight: 600;
+     
+    }
+}

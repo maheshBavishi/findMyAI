@@ -1,0 +1,164 @@
+@import "../../../styles/mixins/index.scss";
+
+.categoriesinformationAlignment {
+  .deal{    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #3d3ec2;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+  p{
+    color: $theme-light-100;
+    padding: 0 5px;
+  }}
+  .grid {
+    display: grid;
+    grid-template-columns: 570px 1fr;
+    gap: 30px;
+    align-items: center;
+
+    @include breakpoint("md-max") {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .griditems {
+      .buttongrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+
+        button {
+          padding: 0 25px;
+          background-color: transparent;
+          display: flex;
+          align-items: center;
+          height: 42px;
+          width: 100%;
+          gap: 5px;
+          @include font16;
+          justify-content: center;
+          cursor: pointer;
+          border-radius: 4px;
+          border: 1px solid rgba(255, 255, 255, 0.22);
+          color: $theme-white;
+          transition: 0.3s ease-in-out;
+
+          &:hover {
+            border: 1px solid $theme-primary-background-color;
+            background-color: $theme-primary-background-color;
+          }
+
+          &.activeButton {
+            border: 1px solid $theme-primary-background-color;
+            background-color: $theme-primary-background-color;
+          }
+        }
+      }
+
+      .twoContentAlignment {
+        display: flex;
+        align-items: center;
+        padding: 0 0 10px 0;
+        gap: 16px;
+        flex-wrap: wrap;
+        .active {
+          border: 1px solid $theme-primary-background-color;
+          background-color: $theme-primary-background-color;
+        }
+        @include breakpoint("sm-max") {
+          gap: 16px 8px;
+        }
+        span {
+          display: block;
+          @include font16;
+          font-weight: 500;
+          color: $theme-light-100;
+
+          @include breakpoint("sm-max") {
+            @include font12;
+          }
+        }
+
+        button {
+          padding: 10px 25px;
+          background-color: transparent;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          @include font16;
+          cursor: pointer;
+          border-radius: 4px;
+          border: 1px solid rgba(255, 255, 255, 0.22);
+          color: $theme-white;
+          transition: 0.3s ease-in-out;
+          @include breakpoint("sm-max") {
+            padding: 8px 12px;
+            font-size: 14px;
+          }
+       
+        }
+      }
+
+      .textStyle {
+        padding: 0 0 24px 0;
+
+        p {
+          @include font16;
+          line-height: 27px;
+          color: $theme-light-100;
+          font-weight: 500;
+        }
+      }
+
+      .profile {
+        align-items: center;
+        padding: 0 0 15px 0;
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        gap: 12px;
+
+        img {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        p {
+          @include font22;
+          letter-spacing: 1px;
+          color: $theme-white;
+          margin: 0 0 4px 0;
+
+          @include breakpoint("sm-max") {
+            @include heading6;
+          }
+        }
+
+        span {
+          display: block;
+          @include font14;
+          color: rgba(255, 255, 255, 0.6);
+          font-weight: 500;
+        }
+      }
+
+      .image {
+        img {
+          width: 100%;
+          height: 320px;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 8px;
+
+          @include breakpoint("sm-max") {
+            height: 210px;
+          }
+        }
+      }
+    }
+  }
+}

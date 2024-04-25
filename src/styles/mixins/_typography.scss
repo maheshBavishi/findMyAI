@@ -1,0 +1,240 @@
+
+@font-face {
+  font-family: 'Paytone One';
+  src: url('/assets/font/Paytone One.ttf');
+}
+
+@font-face {
+  font-family: 'Mulish-SemiBold';
+  src: url('/assets/font/Mulish-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Mulish-Regular';
+  src: url('/assets/font/Mulish-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Mulish-Medium';
+  src: url('/assets/font/Mulish-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Mulish-Light';
+  src: url('/assets/font/Mulish-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Mulish-ExtraBold';
+  src: url('/assets/font/Mulish-ExtraBold.ttf');
+}
+
+
+@font-face {
+  font-family: 'Mulish-Bold';
+  src: url('/assets/font/Mulish-Bold.ttf');
+}
+
+@mixin font14 {
+  font-size: 14px;
+  font-family: "Mulish-Regular";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin font16-bold {
+  font-size: 16px;
+  font-family: "Mulish-SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+@mixin font16 {
+  font-size: 16px;
+  font-family: "Mulish-Regular";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin font16-normal {
+  font-size: 16px;
+  font-family: "Mulish-Regular";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin font18 {
+  font-family: "Mulish-SemiBold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@mixin font12-bold {
+  font-family: "Mulish-Bold";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin font20 {
+  font-size: 20px;
+  font-family: "Mulish-Regular";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin font20-meduim {
+  font-size: 20px;
+  font-family: "Mulish-Medium";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@mixin font12 {
+  font-size: 12px;
+  font-family: "Mulish-Regular";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin font22 {
+  font-size: 22px;
+  font-family: "Mulish-Bold";
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin font24 {
+  font-size: 24px;
+  font-family: "Mulish-Bold";
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin heading1 {
+  font-family: "Mulish-ExtraBold";
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 72px;
+}
+
+@mixin heading2 {
+  // font-family: "Mulish-ExtraBold";
+  font-family: "Mulish-Bold";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin heading3 {
+  font-family: "Mulish-Bold";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@mixin heading5 {
+  font-family: "Mulish-ExtraBold";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+@mixin heading6 {
+  font-family: "Mulish-ExtraBold";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+@mixin heading7 {
+  font-family: "Mulish-ExtraBold";
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+@mixin heading8-bold {
+  font-family: "Mulish-SemiBold";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+
+  @include breakpoint("sm-max") {
+    line-height: 32px;
+  }
+}
+
+@mixin heading9-bold {
+  font-family: "Mulish-SemiBold";
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 52px;
+}
+
+@mixin heading-font {
+  font-family: 'Paytone One' !important;
+  font-weight: 400;
+}
+
+@mixin heading10 {
+  font-size: 60px;
+  line-height: 72px;
+  @include heading-font;
+}
+
+@mixin heading11 {
+  font-size: 36px;
+  line-height: 50px;
+  @include heading-font;
+}
+
+@mixin text32 {
+  font-size: 32px;
+  line-height: 44px;
+  @include heading-font;
+}
+
+@mixin heading-22 {
+  font-size: 22px;
+  @include heading-font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin heading-50 {
+  font-size: 46px;
+  @include heading-font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin heading-40 {
+  font-size: 40px;
+  @include heading-font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

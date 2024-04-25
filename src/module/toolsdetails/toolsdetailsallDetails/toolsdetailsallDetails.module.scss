@@ -1,0 +1,273 @@
+@import "../../../styles/mixins/index.scss";
+
+.toolsDetailsAllDetailsSection {
+  padding: 30px 0 0 0;
+
+  .toolsDetailsAllDetailsGrid {
+    display: grid;
+    grid-template-columns: 1fr 295px;
+    gap: 40px;
+
+    @include breakpoint("md-max") {
+      grid-template-columns: 1fr;
+    }
+
+    .allChildDetailsAlignment {
+      @include font16;
+      font-weight: 500;
+      line-height: 25px;
+      color: $theme-gray-100;
+      padding: 0 0 15px 0;
+
+      strong {
+        color: #fff;
+      }
+
+      p {
+        @include font16-normal;
+        line-height: 25px;
+        color: $theme-light-100;
+        padding: 0 0 25px 0;
+
+
+        a {
+          color: $theme-white;
+          text-decoration-line: underline;
+        }
+      }
+
+      .childDetailsImg {
+        margin: 5px 0 30px 0;
+        width: 100%;
+        height: 400px;
+
+        .lazyImgAlignmnt {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+
+      h6 {
+        font-size: 28px;
+        line-height: 24px;
+        line-height: 24px;
+        letter-spacing: 3%;
+        @include heading-font;
+        color: $theme-white;
+        padding: 0 0 25px 0;
+      }
+      ul {
+        padding-bottom: 25px;
+        margin: 0;
+
+        li {
+          @include font16;
+          font-weight: 500;
+          line-height: 25px;
+          color: $theme-gray-100;
+          padding: 0 0 15px 0;
+
+          &:last-child {
+            padding: 0;
+          }
+        }
+      }
+      li {
+        @include font16;
+        font-weight: 500;
+        line-height: 25px;
+        color: $theme-gray-100;
+        padding: 0 0 15px 0;
+
+        &:last-child {
+          padding: 0;
+        }
+      }
+      h2 {
+        font-size: 28px;
+        line-height: 24px;
+        line-height: 24px;
+        letter-spacing: 3%;
+        @include heading-font;
+        color: $theme-white;
+        padding: 0 0 20px 0;
+      }
+      .prosCrnsDetails {
+        h2 {
+          font-size: 28px;
+          line-height: 24px;
+          line-height: 24px;
+          letter-spacing: 3%;
+          @include heading-font;
+          color: $theme-white;
+          padding: 0 0 20px 0;
+        }
+      }
+    }
+
+    .toolsDetailsRightSide {
+      max-width: 400px;
+      @include breakpoint("md-max") {
+        max-width: 100%;
+      }
+      .featureCategoryDetails {
+        h4 {
+          @include text32;
+          color: $theme-white;
+          position: relative;
+
+          @include breakpoint("sm-max") {
+            @include heading8-bold;
+            @include heading-font;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 119px;
+            height: 11px;
+            border-radius: 8px;
+            background: $theme-secondary-background-color;
+            z-index: -1;
+
+            @include breakpoint("sm-max") {
+              bottom: -4px;
+            }
+          }
+        }
+
+        .featureCategoryCard {
+          padding: 25px 0 0 0;
+
+          .featureCategoryCardchildgrid {
+            @include breakpoint("md-max"){
+              display: grid;
+              grid-template-columns: repeat(2 , 1fr);
+              gap: 0 20px;
+            }
+
+            @include breakpoint("sm-max") {
+              grid-template-columns: 1fr;
+              gap: 0;
+            }
+          }
+
+          .grid {
+            @include breakpoint("md-max") {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 8px;
+            }
+          }
+        }
+      }
+
+      .toolsCategoryDetails {
+        padding: 15px 0 0 0;
+
+        .toolsCategoryBox {
+          background: $theme-light-background;
+          border-radius: 12px;
+          padding: 22px 26px;
+
+          @include breakpoint("sm-max") {
+            padding: 16px;
+          }
+
+          h4 {
+            @include heading11;
+            color: $theme-white;
+            position: relative;
+            font-size: 26px;
+
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: 6px;
+              width: 125px;
+              height: 11px;
+              background: $theme-secondary-background-color;
+              left: 0;
+              z-index: -1;
+              border-radius: 8px;
+            }
+
+            @include breakpoint("md-max") {
+              font-size: 32px;
+            }
+
+            @include breakpoint("sm-max") {
+              font-size: 24px;
+              line-height: 30px;
+            }
+          }
+
+          .toolsCategoryListDetails {
+            padding: 10px 6px;
+
+            @include breakpoint("sm-max") {
+              padding: 16px 0 0 0;
+            }
+
+            ul {
+              padding: 0 0 0 20px;
+              li {
+                padding: 0 0 22px 0;
+
+                @include font16-normal;
+                color: $theme-white;
+
+                @include breakpoint("sm-max") {
+                  padding: 0 0 16px 0;
+                  font-size: 14px;
+                  line-height: 21px;
+                }
+
+                p {
+                  display: flex;
+                  align-items: center;
+                  gap: 6px;
+                  cursor: pointer;
+
+                  img {
+                    width: 10px;
+                    height: 10px;
+                    display: block;
+                  }
+                }
+
+                &:last-child {
+                  padding: 0;
+                }
+
+                a {
+                  text-decoration: none;
+                  color: $theme-white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.skelttonCategory {
+  margin: 0 0 4px 0;
+  height: 28px;
+}
+
+.skeletonDetails {
+  height: 28px;
+  width: 100%;
+  margin: 0 0 4px 0;
+}
+.skeletontitle{
+  margin-bottom: 10px;
+  height: 44px;
+  margin: 10px 0 0 0;
+}

@@ -1,0 +1,114 @@
+@import '../../../styles/mixins/index.scss';
+
+.articlesAndBlogCard {
+    .image {
+        height: 191px;
+
+        .cardImageChild {
+            height: 100%;
+            width: 100%;
+            border-radius: 18px;
+
+            @include breakpoint("md-max") {
+                height: 180px;
+            }
+
+            img {
+                border-radius: 18px;
+            }
+
+        }
+
+    }
+
+    .detailsAlignment {
+        padding: 16px 0 0 0;
+
+        h3 {
+            @include font20;
+            font-weight: 700;
+            color: $theme-white;
+            opacity: 0.95;
+        }
+
+        .button {
+            button {
+                width: 100%;
+                background-color: transparent;
+                padding: 13px;
+                @include font16-bold;
+                border: 1px solid $theme-button-border-color;
+                border-radius: 999px;
+                font-weight: 600;
+                letter-spacing: 0.48px;
+                transition: .3s ease-in-out;
+                color: $theme-gray-100;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $theme-primary-background-color;
+                    color: $theme-white;
+                    border: 1px solid transparent;
+                }
+            }
+        }
+
+        .lastContnetAlignment {
+            display: flex;
+            padding: 0 0 20px 0;
+            align-items: center;
+            justify-content: space-between;
+
+            .icontext {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            span {
+                display: block;
+                color: $theme-gray-100;
+                @include font16;
+                font-weight: 500;
+                letter-spacing: 0.48px;
+            }
+        }
+
+        .line {
+            margin: 20px 0 0 0;
+            padding: 0 0 20px 0;
+            border-top: 1px solid $divider-color;
+        }
+    }
+}
+
+.articalesSkeleton {
+    .skeletonArticalCard {
+        height: 191px;
+        border-radius: 18px;
+        width: 100%;
+
+        @include breakpoint("md-max") {
+            height: 180px;
+        }
+    }
+
+    .skeletonHeading {
+        width: 100%;
+        height: 25px;
+        border-radius: 4px;
+    }
+
+    .skeletonButton {
+        width: 100%;
+        height: 52px;
+        border-radius: 999px;
+    }
+
+    .skeletonDate {
+        width: 100%;
+        height: 24px;
+        border-radius: 4px;
+        margin: 0 0 20px 0;
+    }
+}

@@ -1,0 +1,44 @@
+@import '../../../styles/mixins/index.scss';
+
+.categoriesdetailsbreadcrumbs {
+    padding: 0px 0 20px 0;
+
+
+    @include breakpoint("md-max") {
+        padding: 40px 0;
+    }
+
+    @include breakpoint("sm-max") {
+        padding: 20px 0;
+    }
+
+    .alignment {
+        padding: 22px 0;
+        // border-top: 1px solid $divider-color;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        // border-bottom: 1px solid $divider-color;
+
+        @include breakpoint("sm-max") {
+            padding: 20px 0;
+        }
+
+        img {
+            cursor: pointer;
+        }
+
+        span {
+            cursor: pointer;
+            display: block;
+            @include font16;
+            font-weight: 500;
+            letter-spacing: 0.48px;
+            color: #D1D0D4;
+
+            @include breakpoint("sm-max") {
+                @include font12;
+            }
+        }
+    }
+}
